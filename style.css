@@ -1,0 +1,259 @@
+html {
+    scroll-behavior: smooth;
+}
+
+header, footer {
+    background-color: #1f5f87;
+    color: white;
+    padding: 1rem;
+    text-align: center;
+}
+
+header nav a {
+    color: rgb(0, 0, 0);
+    margin: 0 1rem;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+main {
+    padding: 1rem;
+}
+
+body {
+    padding-top:50px;
+    font-family: 'Roboto', sans-serif, Arial;
+    line-height: 1.6;
+    color: #333;
+    background-color: #fff;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+a {
+    display: inline-block; 
+    background-color: white;
+    color: black; 
+    padding: 0.5rem 1rem;
+    border-radius: 10px; 
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+/* Home button */
+.home-button {
+    position: fixed;
+    text-decoration: none;
+    color: #333;
+    font-size: 1.5rem;
+    padding: 10px;
+    display: inline-flex;
+    align-items: center;
+    top: 10px;
+    left:10px;
+    z-index: 1000;
+    border: 2px solid #333; /* Add border around the button */
+    border-radius: 8px;
+}
+.home-button img {
+    display: block;
+    width: 100%; 
+    height: auto; 
+}
+
+.home-button:hover {
+    color: #d95700; 
+}
+
+/* Image gallery */
+.gallery-item img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+    transition: transform 0.3s ease;
+}
+
+.gallery-item img:hover {
+    transform: scale(1.1);
+}
+
+/* Table */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 1rem 0;
+}
+
+th, td {
+    padding: 0.75rem;
+    border: 1px solid #ddd;
+}
+
+th {
+    background-color: #005f99;
+    color: white;
+    position: sticky;
+    top: 0;
+}
+
+tr:nth-child(even) {
+    background-color: #f2f2f2;
+    color: #1e1e1e;
+}
+
+/* Mobile table */
+.table-container {
+    width: 100%;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+th, td {
+    padding: 8px;
+    text-align: center;
+}
+
+th {
+    background-color: #0069d9;
+    color: white;
+    font-weight: bold;
+}
+
+table, thead, tbody, th, td, tr {
+    display: block;
+    width: 100%;
+}
+
+thead tr {
+    display: none; 
+}
+
+tbody tr {
+    margin-bottom: 10px;
+    border: 1px solid #ddd;
+    padding: 10px;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+/* Cell styling */
+td {
+    width: calc(33.33% - 10px); 
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 8px;
+    font-size: 0.9rem;
+    border: none;
+    text-align: center;
+}
+
+td:before {
+    content: attr(data-label);
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 4px;
+}
+
+/* Button effects */
+a:hover, button:hover {
+    color: #ff5722;
+    transition: color 0.2s ease;
+}
+
+
+button:focus {
+    outline: 2px solid #ff5722;
+}
+
+/* Animation */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.fade-in {
+    opacity: 0;
+    animation: fadeIn 0.5s ease forwards;
+}
+
+/* Add delay to sections to appear after scroll */
+#race_summary {
+    animation-delay: 0.2s;
+}
+
+#team_results {
+    animation-delay: 0.4s;
+}
+
+#individual_results {
+    animation-delay: 0.6s;
+}
+
+#gallery {
+    animation-delay: 0.8s;
+}
+
+/* Reduce motion mobile */
+@media (prefers-reduced-motion: reduce) {
+    * {
+        animation: none;
+        transition: none;
+    }
+}
+
+/* Dark Mode Styles */
+body.dark-mode {
+    background-color: #121212;
+    color: #ffffff;
+}
+
+header.dark-mode, footer.dark-mode {
+    background-color: #1e1e1e;
+}
+
+a.dark-mode {
+    color: #fff; 
+}
+
+/* Button styling for dark mode toggle */
+.dark-mode-toggle {
+    padding: 10px;
+    background-color: #ffffff;
+    color: rgb(0, 0, 0);
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    position: fixed;
+    top: 10px;
+    right: 10px; 
+    z-index: 999;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    border: 2px solid #333; /* Add border around the button */
+    border-radius: 8px;
+
+}
+
+.dark-mode-toggle:hover {
+    background-color: #555;
+}
+
+/* Transition for smooth mode switch */
+body {
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+header, footer {
+    transition: background-color 0.3s ease;
+}
